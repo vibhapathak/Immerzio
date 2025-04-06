@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>United Kingdom - Culture & Heritage</title>
+  <link href="https://fonts.cdnfonts.com/css/gidole" rel="stylesheet">
+  <style>
+    :root {
+      --dark-purple: #433878;
+      --purple: #7E60BF;
+      --lavender: #E4B1F0;
+      --light-pink: #FFE1FF;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Gidole', sans-serif;
+      background: white;
+      color: #333;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    .header {
+      background: rgba(255, 225, 255, 0.4);
+      padding: 30px;
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    .header-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-left: 50px; /* Added margin to move content to the right */
+    }
+
+    h1 {
+      color: var(--purple);
+      font-size: 60px;
+      margin: 0 0 15px 0;
+    }
+
+    .flag {
+      width: 120px;
+      border: 2px solid var(--purple);
+      border-radius: 10px;
+    }
+
+    .container {
+      padding: 30px;
+      line-height: 1.8;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section-title {
+      color: var(--dark-purple);
+      font-size: 32px;
+      margin: 30px 0 10px;
+    }
+
+    .image {
+      width: 100%;
+      max-width: 700px;
+      margin: 20px auto;
+      display: block;
+      border-radius: 10px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    }
+    
+    /* Style for the clickable onigiri image */
+    .ar-image {
+      width: 200px;
+      display: block;
+      margin: 40px auto;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    
+    .ar-image:hover {
+      transform: scale(1.1);
+    }
+    
+    .ar-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    
+    .ar-label {
+      display: block;
+      color: var(--purple);
+      font-weight: bold;
+      margin-top: 10px;
+      font-size: 16px;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 12px 24px;
+      background-color: var(--purple);
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: var(--dark-purple);
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 38px; }
+      .section-title { font-size: 24px; }
+      .header-content { margin-left: 20px; } /* Adjusted for mobile */
+      .ar-image { width: 150px; }
+    }
+    .ar-container {
+      display: flex;
+      justify-content: center;  /* Horizontally center the image */
+      align-items: center;      /* Vertically center the image */
+      height: 100%;             /* Ensure the container has a height */
+      width: 100%;    
+      flex-direction: column;          /* Ensure the container takes up full width */
+    }
+    
+    .ar-image {
+  max-width: 20%;   /* Adjust the size of the image */
+  max-height: 20%;  /* Optional: You can set a max-height to control the height */
+  object-fit: contain; /* Ensure the image scales properly without distortion */
+  margin-left: auto ;  /* Shifts the image to the right */
+  margin-right: 50px;    /* Optional: Ensures no right margin */
+  height: 200px;
+}
+
+
+.ar-label {
+  margin-top: 10px;  /* Adds some space between the image and the label */
+  font-size: 16px;   /* Adjust font size as needed */
+  color: #333;       /* Adjust color of the label */
+  margin-left: auto;  /* Shifts the label to the right */
+  margin-right: 110px;    /* Optional: Ensures no right margin */
+  
+}
+
+    .ar-image:hover {
+      transform: scale(1.1);
+    }
+
+    .main-image{
+      margin-top: 5px;
+      height: 100px;
+    }
+    .ar-image:hover {
+      transform: scale(1.1);
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <h1 id="title">Japan</h1>
+      <img  class = "main-image" src="images/uk.png" alt="United.Kingdom. Flag" class="flag" />
+      
+    </div>
+    <div class="ar-container" style="margin-top: 15px;">
+      <img class="ar-image" src="images/ukemo.png" alt="Interactive Onigiri" onclick="window.open('https://mywebar.com/qr/671818', '_blank')" />
+      <span class="ar-label" id="top-ar-label">Click to experience  AR experience</span>
+    </div>
+    
+
+  <div class="container">
+    <h2 class="section-title" id="monarchy-title">Monarchy & Heritage</h2>
+    <p id="monarchy-text">The UK is a constitutional monarchy, with a rich history of royalty and tradition. The British royal family plays a major role in the country's identity and cultural heritage.</p>
+    <img class="image" src="images/uk1.jpeg" alt="Monarchy & Heritage Image" />
+
+    <h2 class="section-title" id="festivals-title">Festivals & Traditions</h2>
+    <p id="festivals-text">Major celebrations include Christmas, the Queen's Birthday, and Guy Fawkes Night. These events are celebrated with parades, fireworks, and gatherings.</p>
+    <img class="image" src="images/uk2.jpg" alt="Festivals & Traditions Image" />
+
+    <h2 class="section-title" id="cuisine-title">Cuisine</h2>
+    <p id="cuisine-text">British cuisine includes iconic dishes like fish and chips, roast dinners, and a variety of teas. Regional specialties also reflect the UK's diverse culture.</p>
+    <img class="image" src="images/uk3.jpeg" alt="Cuisine Image" />
+
+    <h2 class="section-title" id="entertainment-title">Media & Entertainment</h2>
+    <p id="entertainment-text">The UK is known for its contributions to literature, music, and television. British authors, musicians, and actors have had a significant influence on global culture.</p>
+    <img class="image" src="images/uk4.png" alt="Media & Entertainment Image" />
+
+    <a class="back-button" href="index.html">← Back to Home</a>
+  </div>
+
+  <script>
+    // Get selected language from query parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const lang = urlParams.get('lang') || 'en'; // fallback to English
+
+    // Translations for the content
+    const translations = {
+      en: {
+        title: "United Kingdom",
+        monarchyTitle: "Monarchy & Heritage",
+        monarchyText: "The UK is a constitutional monarchy, with a rich history of royalty and tradition. The British royal family plays a major role in the country's identity and cultural heritage.",
+        festivalsTitle: "Festivals & Traditions",
+        festivalsText: "Major celebrations include Christmas, the Queen's Birthday, and Guy Fawkes Night. These events are celebrated with parades, fireworks, and gatherings.",
+        cuisineTitle: "Cuisine",
+        cuisineText: "British cuisine includes iconic dishes like fish and chips, roast dinners, and a variety of teas. Regional specialties also reflect the UK's diverse culture.",
+        entertainmentTitle: "Media & Entertainment",
+        entertainmentText: "The UK is known for its contributions to literature, music, and television. British authors, musicians, and actors have had a significant influence on global culture."
+      },
+      hi: {
+        title: "संयुक्त राज्य अमेरिका",
+        monarchyTitle: "संस्कृतिक मेल्टिंग पॉट",
+        monarchyText: "संयुक्त राज्य अमेरिका अपनी सांस्कृतिक विविधता के लिए जाना जाता है, जो सदियों से आव्रजन की लहरों से प्रभावित है। यह नवाचार, मनोरंजन और व्यक्तिगत स्वतंत्रता का केंद्र है।",
+        festivalsTitle: "त्योहार और परंपराएँ",
+        festivalsText: "प्रमुख उत्सवों में धन्यवाद, स्वतंत्रता दिवस, और हैलोवीन शामिल हैं। इन आयोजनों में परेड, आतिशबाजी और पारिवारिक मिलन समारोह होते हैं।",
+        cuisineTitle: "व्यंजन",
+        cuisineText: "अमेरिकी व्यंजन में बर्गर, हॉट डॉग, बारबेक्यू और विभिन्न जातीय पृष्ठभूमियों से आने वाले व्यंजन शामिल हैं। प्रत्येक राज्य के पास अपनी विशेषताएँ होती हैं।",
+        entertainmentTitle: "मीडिया और मनोरंजन",
+        entertainmentText: "हॉलीवुड वैश्विक मनोरंजन उद्योग का केंद्र है, जबकि अमेरिकी संगीत शैलियाँ जैसे जैज़, रॉक, और हिप-हॉप ने वैश्विक संस्कृति को आकार दिया है।"
+      },
+      ja: {
+        title: "アメリカ合衆国",
+        monarchyTitle: "文化的なメルティングポット",
+        monarchyText: "アメリカは、何世代にもわたる移民の波によって影響を受けた文化的多様性で知られています。それは革新、エンターテイメント、そして個人の自由の中心地です。",
+        festivalsTitle: "祭りと伝統",
+        festivalsText: "主な祝祭には感謝祭、独立記念日、ハロウィンがあります。これらのイベントはパレード、花火、家族の集まりで祝われます。",
+        cuisineTitle: "料理",
+        cuisineText: "アメリカの料理には、ハンバーガー、ホットドッグ、バーベキュー、そしてさまざまな民族的背景からの料理が含まれています。各州にはそれぞれの特産品があります。",
+        entertainmentTitle: "メディアとエンターテイメント",
+        entertainmentText: "ハリウッドは世界のエンターテイメント業界の中心地であり、アメリカの音楽ジャンルであるジャズ、ロック、ヒップホップは世界の文化を形作りました。"
+      },
+      de: {
+        title: "Vereinigte Staaten von Amerika",
+        monarchyTitle: "Kultureller Schmelztiegel",
+        monarchyText: "Die USA sind bekannt für ihre kulturelle Vielfalt, die durch Wellen von Einwanderung über Jahrhunderte hinweg beeinflusst wurde. Es ist ein Zentrum für Innovation, Unterhaltung und individuelle Freiheit.",
+        festivalsTitle: "Festivals & Traditionen",
+        festivalsText: "Wichtige Feierlichkeiten sind Erntedankfest, Unabhängigkeitstag und Halloween. Diese Veranstaltungen werden mit Paraden, Feuerwerken und Familientreffen gefeiert.",
+        cuisineTitle: "Küche",
+        cuisineText: "Die amerikanische Küche umfasst Burger, Hot Dogs, Barbecue und vielfältige Gerichte aus verschiedenen ethnischen Hintergründen. Jeder Bundesstaat hat seine eigenen Spezialitäten.",
+        entertainmentTitle: "Medien & Unterhaltung",
+        entertainmentText: "Hollywood ist das Herz der globalen Unterhaltungsindustrie, während amerikanische Musikgenres wie Jazz, Rock und Hip-Hop die Weltkultur geprägt haben."
+      }
+    };
+
+    // Function to change content based on selected language
+    function changeLanguage(language) {
+      document.getElementById('title').textContent = translations[language].title;
+      document.getElementById('monarchy-title').textContent = translations[language].monarchyTitle;
+      document.getElementById('monarchy-text').textContent = translations[language].monarchyText;
+      document.getElementById('festivals-title').textContent = translations[language].festivalsTitle;
+      document.getElementById('festivals-text').textContent = translations[language].festivalsText;
+      document.getElementById('cuisine-title').textContent = translations[language].cuisineTitle;
+      document.getElementById('cuisine-text').textContent = translations[language].cuisineText;
+      document.getElementById('entertainment-title').textContent = translations[language].entertainmentTitle;
+      document.getElementById('entertainment-text').textContent = translations[language].entertainmentText;
+    }
+
+    // Call the function to change content based on the selected language
+    changeLanguage(lang);
+  </script>
+</body>
+</html>

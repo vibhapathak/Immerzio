@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Canada - Culture & Heritage</title>
+  <link href="https://fonts.cdnfonts.com/css/gidole" rel="stylesheet">
+  <style>
+    :root {
+      --dark-purple: #433878;
+      --purple: #7E60BF;
+      --lavender: #E4B1F0;
+      --light-pink: #FFE1FF;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Gidole', sans-serif;
+      background: white;
+      color: #333;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    .header {
+      background: rgba(255, 225, 255, 0.4);
+      padding: 30px;
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    h1 {
+      color: var(--purple);
+      font-size: 60px;
+      margin-bottom: 10px;
+    }
+
+    .flag {
+      width: 120px;
+      margin: 20px auto;
+      display: block;
+      border: 2px solid var(--purple);
+      border-radius: 10px;
+    }
+
+    .container {
+      padding: 30px;
+      line-height: 1.8;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section-title {
+      color: var(--dark-purple);
+      font-size: 32px;
+      margin: 30px 0 10px;
+    }
+
+    .image {
+      width: 100%;
+      max-width: 700px;
+      margin: 20px auto;
+      display: block;
+      border-radius: 10px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 12px 24px;
+      background-color: var(--purple);
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: var(--dark-purple);
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 38px; }
+      .section-title { font-size: 24px; }
+    }
+    .ar-container {
+      display: flex;
+      justify-content: center;  /* Horizontally center the image */
+      align-items: center;      /* Vertically center the image */
+      height: 100%;             /* Ensure the container has a height */
+      width: 100%;    
+      flex-direction: column;          /* Ensure the container takes up full width */
+    }
+    
+    .ar-image {
+  max-width: 20%;   /* Adjust the size of the image */
+  max-height: 20%;  /* Optional: You can set a max-height to control the height */
+  object-fit: contain; /* Ensure the image scales properly without distortion */
+  margin-left: auto;  /* Shifts the image to the right */
+  margin-right: 0;    /* Optional: Ensures no right margin */
+}
+
+
+.ar-label {
+  margin-top: 1px;  /* Adds some space between the image and the label */
+  font-size: 16px;   /* Adjust font size as needed */
+  color: #333;       /* Adjust color of the label */
+  margin-left: auto;  /* Shifts the label to the right */
+  margin-right: 110px;    /* Optional: Ensures no right margin */
+}
+
+    .ar-image:hover {
+      transform: scale(1.1);
+    }
+
+    .main-image{
+      margin-top: 5px;
+      height: 100px;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <h1 id="title">India</h1>
+      <img class = "main-image" src="images/canada.png" alt="Canada Flag" class="flag" />
+      
+    </div>
+    <div class="ar-container" style="margin-top: 15px;">
+      <img class="ar-image" src="images/cemo.png" alt="Interactive Onigiri" onclick="window.open('https://mywebar.com/qr/671818', '_blank')" />
+      <span class="ar-label" id="top-ar-label">AR/VR</span>
+    </div>
+  </div>
+  <div class="container">
+    <h2 class="section-title" id="multicultural-title">Multicultural Society</h2>
+    <p id="multicultural-text">Canada is known for its inclusiveness and multiculturalism. French and English are official languages, and immigration shapes its modern identity.</p>
+    <img class="image" src="images/canada1.jpg" alt="Multicultural Society Image" />
+    
+    <h2 class="section-title" id="festivals-title">Festivals & Events</h2>
+    <p id="festivals-text">Canada Day, Winterlude, and Calgary Stampede highlight its festive spirit. Indigenous heritage is also celebrated through powwows and cultural programs.</p>
+    <img class="image" src="images/canada2.jpg" alt="Festivals & Events Image" />
+    
+    <h2 class="section-title" id="cuisine-title">Cuisine</h2>
+    <p id="cuisine-text">Famous for poutine, maple syrup, and butter tarts, Canadian cuisine also reflects diverse global flavors from its immigrant communities.</p>
+    <img class="image" src="images/canada3.jpg" alt="Cuisine Image" />
+    
+    <h2 class="section-title" id="art-title">Art & Wilderness</h2>
+    <p id="art-text">Canadian culture values both creative arts and the outdoors. Group of Seven painters, First Nations art, and love for nature define Canadian spirit.</p>
+    <img class="image" src="images/canada4.jpeg" alt="Art & Wilderness Image" />
+
+    <a class="back-button" href="index.html">← Back to Home</a>
+  </div>
+
+  <script>
+    // Get selected language from query parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const lang = urlParams.get('lang') || 'en'; // fallback to English
+
+    // Translations for the content
+    const translations = {
+      en: {
+        title: "Canada",
+        multiculturalTitle: "Multicultural Society",
+        multiculturalText: "Canada is known for its inclusiveness and multiculturalism. French and English are official languages, and immigration shapes its modern identity.",
+        festivalsTitle: "Festivals & Events",
+        festivalsText: "Canada Day, Winterlude, and Calgary Stampede highlight its festive spirit. Indigenous heritage is also celebrated through powwows and cultural programs.",
+        cuisineTitle: "Cuisine",
+        cuisineText: "Famous for poutine, maple syrup, and butter tarts, Canadian cuisine also reflects diverse global flavors from its immigrant communities.",
+        artTitle: "Art & Wilderness",
+        artText: "Canadian culture values both creative arts and the outdoors. Group of Seven painters, First Nations art, and love for nature define Canadian spirit."
+      },
+      hi: {
+        title: "कनाडा",
+        multiculturalTitle: "बहुसांस्कृतिक समाज",
+        multiculturalText: "कनाडा अपनी समावेशिता और बहुसांस्कृतिवाद के लिए जाना जाता है। फ्रेंच और अंग्रेजी आधिकारिक भाषाएँ हैं, और आप्रवासन इसके आधुनिक पहचान को आकार देता है।",
+        festivalsTitle: "त्योहार और आयोजन",
+        festivalsText: "कनाडा डे, विंटरल्यूड, और कैलगरी स्टैम्पेड इसकी त्योहारों की भावना को उजागर करते हैं। स्वदेशी धरोहर को भी पाववॉव और सांस्कृतिक कार्यक्रमों के माध्यम से मनाया जाता है।",
+        cuisineTitle: "व्यंजन",
+        cuisineText: "पूटीने, मेपल सिरप और बटर टार्ट्स के लिए प्रसिद्ध, कनाडाई व्यंजन अपनी आप्रवासी समुदायों से विविध वैश्विक स्वादों को भी दर्शाता है।",
+        artTitle: "कला और वन्यजीव",
+        artText: "कनाडाई संस्कृति रचनात्मक कला और बाहरी जीवन दोनों को महत्व देती है। ग्रुप ऑफ सेवन चित्रकारों, पहले राष्ट्रों की कला, और प्रकृति के प्रति प्रेम कनाडाई आत्मा को परिभाषित करते हैं।"
+      },
+      ja: {
+        title: "カナダ",
+        multiculturalTitle: "多文化社会",
+        multiculturalText: "カナダはその包括性と多文化主義で知られています。フランス語と英語は公用語であり、移民が現代のアイデンティティを形成しています。",
+        festivalsTitle: "祭りとイベント",
+        festivalsText: "カナダデー、ウィンタールード、カルガリースタンピードはその祭りの精神を強調しています。先住民の遺産はポウワウや文化プログラムを通じても祝われています。",
+        cuisineTitle: "料理",
+        cuisineText: "プティン、メープルシロップ、バタタルトで有名なカナダ料理は、移民コミュニティからの多様な世界の味も反映しています。",
+        artTitle: "アートと野生",
+        artText: "カナダ文化は創造的なアートとアウトドアの両方を重視しています。セブングループの画家、ファーストネーションのアート、そして自然への愛がカナダ人の精神を定義しています。"
+      },
+      de: {
+        title: "Kanada",
+        multiculturalTitle: "Multikulturelle Gesellschaft",
+        multiculturalText: "Kanada ist bekannt für seine Inklusivität und Multikulturalismus. Französisch und Englisch sind Amtssprachen, und Einwanderung prägt seine moderne Identität.",
+        festivalsTitle: "Festivals & Veranstaltungen",
+        festivalsText: "Der Kanada-Tag, Winterlude und das Calgary Stampede heben den festlichen Geist hervor. Indigene Erbes wird auch durch Powwows und kulturelle Programme gefeiert.",
+        cuisineTitle: "Küche",
+        cuisineText: "Berühmt für Poutine, Ahornsirup und Buttertörtchen, spiegelt die kanadische Küche auch vielfältige globale Aromen wider, die aus den Einwanderergemeinschaften stammen.",
+        artTitle: "Kunst & Wildnis",
+        artText: "Die kanadische Kultur schätzt sowohl kreative Künste als auch die Natur. Die Gruppe der Sieben Maler, First Nations Kunst und die Liebe zur Natur definieren den kanadischen Geist."
+      }
+    };
+
+    // Function to change content based on selected language
+    function changeLanguage(language) {
+      document.getElementById('title').textContent = translations[language].title;
+      document.getElementById('multicultural-title').textContent = translations[language].multiculturalTitle;
+      document.getElementById('multicultural-text').textContent = translations[language].multiculturalText;
+      document.getElementById('festivals-title').textContent = translations[language].festivalsTitle;
+      document.getElementById('festivals-text').textContent = translations[language].festivalsText;
+      document.getElementById('cuisine-title').textContent = translations[language].cuisineTitle;
+      document.getElementById('cuisine-text').textContent = translations[language].cuisineText;
+      document.getElementById('art-title').textContent = translations[language].artTitle;
+      document.getElementById('art-text').textContent = translations[language].artText;
+    }
+
+    // Call the function to change content based on the selected language
+    changeLanguage(lang);
+  </script>
+
+</body>
+</html>

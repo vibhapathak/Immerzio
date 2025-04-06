@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Germany - Culture & Heritage</title>
+  <link href="https://fonts.cdnfonts.com/css/gidole" rel="stylesheet">
+  <style>
+    :root {
+      --dark-purple: #433878;
+      --purple: #7E60BF;
+      --lavender: #E4B1F0;
+      --light-pink: #FFE1FF;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Gidole', sans-serif;
+      background: white;
+      color: #333;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    .header {
+      background: rgba(255, 225, 255, 0.4);
+      padding: 30px;
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    h1 {
+      color: var(--purple);
+      font-size: 60px;
+      margin-bottom: 10px;
+    }
+
+    .flag {
+      width: 120px;
+      margin: 20px auto;
+      display: block;
+      border: 2px solid var(--purple);
+      border-radius: 10px;
+    }
+
+    .container {
+      padding: 30px;
+      line-height: 1.8;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section-title {
+      color: var(--dark-purple);
+      font-size: 32px;
+      margin: 30px 0 10px;
+    }
+
+    .image {
+      width: 100%;
+      max-width: 700px;
+      margin: 20px auto;
+      display: block;
+      border-radius: 10px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 12px 24px;
+      background-color: var(--purple);
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: var(--dark-purple);
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 38px; }
+      .section-title { font-size: 24px; }
+    }
+    .ar-container {
+      display: flex;
+      justify-content: center;  /* Horizontally center the image */
+      align-items: center;      /* Vertically center the image */
+      height: 100%;             /* Ensure the container has a height */
+      width: 100%;    
+      flex-direction: column;          /* Ensure the container takes up full width */
+    }
+    
+    .ar-image {
+  max-width: 20%;   /* Adjust the size of the image */
+  max-height: 20%;  /* Optional: You can set a max-height to control the height */
+  object-fit: contain; /* Ensure the image scales properly without distortion */
+  margin-left: auto ;  /* Shifts the image to the right */
+  margin-right: 50px;    /* Optional: Ensures no right margin */
+  height: 200px;
+}
+
+
+.ar-label {
+  margin-top: 10px;  /* Adds some space between the image and the label */
+  font-size: 16px;   /* Adjust font size as needed */
+  color: #333;       /* Adjust color of the label */
+  margin-left: auto;  /* Shifts the label to the right */
+  margin-right: 110px;    /* Optional: Ensures no right margin */
+  
+}
+
+    .ar-image:hover {
+      transform: scale(1.1);
+    }
+
+    .main-image{
+      margin-top: 5px;
+      height: 100px;
+    }
+    .ar-image:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <h1 id="title">India</h1>
+      <img class = "main-image" src="images/germany.png" alt="Canada Flag" class="flag" />
+      
+    </div>
+    <div class="ar-container" style="margin-top: 15px;">
+      <img class="ar-image" src="images/gemo.png" alt="Interactive Onigiri" onclick="window.open('https://mywebar.com/qr/671815')" />
+      <span class="ar-label" id="top-ar-label">AR/VR</span>
+    </div>
+  </div>
+
+  </div>
+  <div class="container">
+    <h2 class="section-title" id="cultural-identity-title">Cultural Identity</h2>
+    <p id="cultural-identity-text">Germany is known for its contributions to philosophy, music, literature, and engineering. Its culture emphasizes precision, efficiency, and tradition.</p>
+    <img class="image" src="images/g1.jpg" alt="Cultural Identity Image" />
+
+    <h2 class="section-title" id="festivals-title">Festivals</h2>
+    <p id="festivals-text">Germany is famous for Oktoberfest, Christmas markets, and Carnival. These festivals showcase local crafts, cuisine, and folk traditions.</p>
+    <img class="image" src="images/g2.jpg.avif" alt="Festivals Image" />
+
+    <h2 class="section-title" id="cuisine-title">Cuisine</h2>
+    <p id="cuisine-text">German food includes sausages, pretzels, schnitzel, and hearty stews. Beer and bread culture are significant in daily life.</p>
+    <img class="image" src="images/g3.jpg" alt="Cuisine Image" />
+
+    <h2 class="section-title" id="art-innovation-title">Art & Innovation</h2>
+    <p id="art-innovation-text">Germany has been a leader in classical music (Beethoven, Bach), architecture (Bauhaus), and automotive design with brands like BMW and Mercedes-Benz.</p>
+    <img class="image" src="images/g4.jpg" alt="Art & Innovation Image" />
+
+    <a class="back-button" href="index.html">← Back to Home</a>
+  </div>
+
+  <script>
+    // Get selected language from query parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const lang = urlParams.get('lang') || 'en'; // fallback to English
+
+    // Translations for the content
+    const translations = {
+      en: {
+        title: "Germany",
+        culturalIdentityTitle: "Cultural Identity",
+        culturalIdentityText: "Germany is known for its contributions to philosophy, music, literature, and engineering. Its culture emphasizes precision, efficiency, and tradition.",
+        festivalsTitle: "Festivals",
+        festivalsText: "Germany is famous for Oktoberfest, Christmas markets, and Carnival. These festivals showcase local crafts, cuisine, and folk traditions.",
+        cuisineTitle: "Cuisine",
+        cuisineText: "German food includes sausages, pretzels, schnitzel, and hearty stews. Beer and bread culture are significant in daily life.",
+        artInnovationTitle: "Art & Innovation",
+        artInnovationText: "Germany has been a leader in classical music (Beethoven, Bach), architecture (Bauhaus), and automotive design with brands like BMW and Mercedes-Benz."
+      },
+      hi: {
+        title: "जर्मनी",
+        culturalIdentityTitle: "संस्कृतिक पहचान",
+        culturalIdentityText: "जर्मनी अपने दर्शनशास्त्र, संगीत, साहित्य और इंजीनियरिंग में योगदान के लिए जाना जाता है। इसका सांस्कृतिक दृष्टिकोण सटीकता, दक्षता और परंपरा पर बल देता है।",
+        festivalsTitle: "त्योहार",
+        festivalsText: "जर्मनी ओकटोबरफेस्ट, क्रिसमस बाजार और कार्निवल के लिए प्रसिद्ध है। ये त्योहार स्थानीय शिल्प, भोजन और लोक परंपराओं को प्रदर्शित करते हैं।",
+        cuisineTitle: "व्यंजन",
+        cuisineText: "जर्मन भोजन में सॉसेज, प्रेट्ज़ेल, श्निट्ज़ेल, और हार्दिक स्टू शामिल हैं। बीयर और ब्रेड संस्कृति दैनिक जीवन में महत्वपूर्ण हैं।",
+        artInnovationTitle: "कला और नवाचार",
+        artInnovationText: "जर्मनी शास्त्रीय संगीत (बीथोवेन, बाख), वास्तुकला (बौहॉस), और ऑटोमोटिव डिज़ाइन में एक नेता रहा है, जिसमें बीएमडब्ल्यू और मर्सिडीज-बेंज जैसे ब्रांड शामिल हैं।"
+      },
+      ja: {
+        title: "ドイツ",
+        culturalIdentityTitle: "文化的アイデンティティ",
+        culturalIdentityText: "ドイツは哲学、音楽、文学、そして工学への貢献で知られています。その文化は精度、効率、そして伝統を重視しています。",
+        festivalsTitle: "祭り",
+        festivalsText: "ドイツはオクトーバーフェスト、クリスマスマーケット、そしてカーニバルで有名です。これらの祭りは地元の工芸品、料理、そして民俗伝統を展示しています。",
+        cuisineTitle: "料理",
+        cuisineText: "ドイツ料理にはソーセージ、プレッツェル、シュニッツェル、そして心温まるシチューが含まれています。ビールとパンの文化は日常生活において重要です。",
+        artInnovationTitle: "芸術と革新",
+        artInnovationText: "ドイツはクラシック音楽（ベートーヴェン、バッハ）、建築（バウハウス）、そして自動車デザイン（BMW、メルセデス・ベンツ）において先駆者でした。"
+      },
+      de: {
+        title: "Deutschland",
+        culturalIdentityTitle: "Kulturelle Identität",
+        culturalIdentityText: "Deutschland ist bekannt für seine Beiträge zur Philosophie, Musik, Literatur und Technik. Seine Kultur betont Präzision, Effizienz und Tradition.",
+        festivalsTitle: "Festivals",
+        festivalsText: "Deutschland ist berühmt für das Oktoberfest, Weihnachtsmärkte und den Karneval. Diese Festivals zeigen lokale Handwerkskunst, Küche und Volksbräuche.",
+        cuisineTitle: "Küche",
+        cuisineText: "Deutsche Küche umfasst Würstchen, Brezeln, Schnitzel und herzhafte Eintöpfe. Bier- und Brot-Kultur sind im täglichen Leben bedeutend.",
+        artInnovationTitle: "Kunst & Innovation",
+        artInnovationText: "Deutschland war führend in klassischer Musik (Beethoven, Bach), Architektur (Bauhaus) und Automobildesign mit Marken wie BMW und Mercedes-Benz."
+      }
+    };
+
+    // Function to change content based on selected language
+    function changeLanguage(language) {
+      document.getElementById('title').textContent = translations[language].title;
+      document.getElementById('cultural-identity-title').textContent = translations[language].culturalIdentityTitle;
+      document.getElementById('cultural-identity-text').textContent = translations[language].culturalIdentityText;
+      document.getElementById('festivals-title').textContent = translations[language].festivalsTitle;
+      document.getElementById('festivals-text').textContent = translations[language].festivalsText;
+      document.getElementById('cuisine-title').textContent = translations[language].cuisineTitle;
+      document.getElementById('cuisine-text').textContent = translations[language].cuisineText;
+      document.getElementById('art-innovation-title').textContent = translations[language].artInnovationTitle;
+      document.getElementById('art-innovation-text').textContent = translations[language].artInnovationText;
+    }
+
+    // Set language on page load
+    changeLanguage(lang);
+  </script>
+</body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>New Zealand - Culture & Heritage</title>
+  <link href="https://fonts.cdnfonts.com/css/gidole" rel="stylesheet">
+
+  <style>
+    :root {
+      --dark-purple: #433878;
+      --purple: #7E60BF;
+      --lavender: #E4B1F0;
+      --light-pink: #FFE1FF;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Gidole', sans-serif;
+      background: white;
+      color: #333;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    .header {
+      background: rgba(255, 225, 255, 0.4);
+      padding: 30px;
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    h1 {
+      color: var(--purple);
+      font-size: 60px;
+      margin-bottom: 10px;
+    }
+
+    .flag {
+      width: 120px;
+      margin: 20px auto;
+      display: block;
+      border: 2px solid var(--purple);
+      border-radius: 10px;
+    }
+
+    .container {
+      padding: 30px;
+      line-height: 1.8;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section-title {
+      color: var(--dark-purple);
+      font-size: 32px;
+      margin: 30px 0 10px;
+    }
+
+    .image {
+      width: 100%;
+      max-width: 700px;
+      margin: 20px auto;
+      display: block;
+      border-radius: 10px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 12px 24px;
+      background-color: var(--purple);
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: var(--dark-purple);
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 38px; }
+      .section-title { font-size: 24px; }
+    }
+    .ar-container {
+      display: flex;
+      justify-content: flex-end; /* Align items to the right */
+      align-items: flex-start;   /* Align items to the top */
+      height: 100%;
+      width: 100%;
+      flex-direction: column;    /* Stack the image and label vertically */
+    }
+    
+    .ar-image {
+  max-width: 20%;   /* Adjust the size of the image */
+  max-height: 20%;  /* Optional: You can set a max-height to control the height */
+  object-fit: contain; /* Ensure the image scales properly without distortion */
+  margin-left: auto ;  /* Shifts the image to the right */
+  margin-right: 40px;    /* Optional: Ensures no right margin */
+  height: 200px;
+}
+
+
+.ar-label {
+  margin-top: 10px;  /* Adds some space between the image and the label */
+  font-size: 16px;   /* Adjust font size as needed */
+  color: #333;       /* Adjust color of the label */
+  margin-left: auto;  /* Shifts the label to the right */
+  margin-right: 110px;    /* Optional: Ensures no right margin */
+  
+}
+
+    .ar-image:hover {
+      transform: scale(1.1);
+    }
+
+    .main-image{
+      margin-top: 5px;
+      height: 100px;
+    }
+    .ar-image:hover {
+      transform: scale(1.1);
+    }
+    
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="header-content">
+      <h1 id="title">New Zealand</h1>
+      <img class = " main-image"src="images/uk.png" alt="New Zealand Flag" class="flag" />
+      
+    </div>
+    <div class="ar-container" style="margin-top: 15px;">
+      <img class="ar-image" src="images/nzemo.png" alt="Interactive Onigiri" onclick="window.open('https://mywebar.com/qr/671818', '_blank')" />
+      <span class="ar-label" id="top-ar-label">AR/VR</span>
+    </div>
+  </div>  
+  <div class="container">
+    <h2 class="section-title" id="maori-culture-title">Maori & Western Culture</h2>
+    <p id="maori-culture-text">
+      New Zealand embraces both Maori traditions and Western lifestyles. The Maori haka, tattoos, and legends play a vital cultural role.
+    </p>
+
+    <img class="image" src="images/nz1.jpg" alt="Maori & Western Culture" />
+
+    <h2 class="section-title" id="festivals-title">Festivals</h2>
+    <p id="festivals-text">
+      Events like Waitangi Day and Matariki (Maori New Year) celebrate national identity. Cultural festivals and rugby matches are significant gatherings.
+    </p>
+
+    <img class="image" src="images/nz2.jpg" alt="Festivals Image" />
+
+    <h2 class="section-title" id="cuisine-title">Cuisine</h2>
+    <p id="cuisine-text">
+      New Zealand is known for lamb, seafood, and the traditional Maori hangi. The country's wine and coffee culture are also popular.
+    </p>
+
+    <img class="image" src="images/nz3.jpg" alt="Cuisine Image" />
+
+    <h2 class="section-title" id="nature-title">Nature & Adventure</h2>
+    <p id="nature-text">
+      Nature is deeply ingrained in the Kiwi lifestyle. From mountains to beaches, outdoor adventure is a cultural norm.
+    </p>
+
+    <img class="image" src="images/nz4.jpg" alt="Nature & Adventure" />
+
+    <a class="back-button" href="index.html">← Back to Home</a>
+  </div>
+
+  <script>
+    // Get selected language from query parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const lang = urlParams.get('lang') || 'en'; // fallback to English
+
+    // Translations for the content
+    const translations = {
+      en: {
+        title: "New Zealand",
+        maoriCultureTitle: "Maori & Western Culture",
+        maoriCultureText: "New Zealand embraces both Maori traditions and Western lifestyles. The Maori haka, tattoos, and legends play a vital cultural role.",
+        festivalsTitle: "Festivals",
+        festivalsText: "Events like Waitangi Day and Matariki (Maori New Year) celebrate national identity. Cultural festivals and rugby matches are significant gatherings.",
+        cuisineTitle: "Cuisine",
+        cuisineText: "New Zealand is known for lamb, seafood, and the traditional Maori hangi. The country's wine and coffee culture are also popular.",
+        natureTitle: "Nature & Adventure",
+        natureText: "Nature is deeply ingrained in the Kiwi lifestyle. From mountains to beaches, outdoor adventure is a cultural norm."
+      },
+      hi: {
+        title: "न्यूज़ीलैंड",
+        maoriCultureTitle: "माओरी और पश्चिमी संस्कृति",
+        maoriCultureText: "न्यूज़ीलैंड माओरी परंपराओं और पश्चिमी जीवनशैली दोनों को अपनाता है। माओरी हाका, टैटू और किंवदंतियाँ सांस्कृतिक दृष्टि से महत्वपूर्ण भूमिका निभाती हैं।",
+        festivalsTitle: "त्योहार",
+        festivalsText: "वेटांगी दिवस और मातारिकी (माओरी नववर्ष) जैसे कार्यक्रम राष्ट्रीय पहचान का उत्सव मनाते हैं। सांस्कृतिक त्योहार और रग्बी मैच महत्वपूर्ण आयोजन होते हैं।",
+        cuisineTitle: "भोजन",
+        cuisineText: "न्यूज़ीलैंड अपने मेमने, समुद्री भोजन और पारंपरिक माओरी हांगी के लिए जाना जाता है। देश की शराब और कॉफी संस्कृति भी लोकप्रिय हैं।",
+        natureTitle: "प्रकृति और साहसिक कार्य",
+        natureText: "प्रकृति की गहरी जड़ें कीवी जीवनशैली में हैं। पहाड़ों से लेकर समुद्र तटों तक, बाहरी साहसिक कार्य एक सांस्कृतिक मानदंड है।"
+      },
+      ja: {
+        title: "ニュージーランド",
+        maoriCultureTitle: "マオリ文化と西洋文化",
+        maoriCultureText: "ニュージーランドは、マオリの伝統と西洋のライフスタイルの両方を受け入れています。マオリのハカ、タトゥー、そして伝説は文化的に重要な役割を果たします。",
+        festivalsTitle: "祭り",
+        festivalsText: "ワイタンギデーやマタリキ（マオリの新年）などのイベントは、国のアイデンティティを祝います。文化的な祭りやラグビーの試合は重要な集まりです。",
+        cuisineTitle: "料理",
+        cuisineText: "ニュージーランドはラム肉、シーフード、伝統的なマオリのハンギで知られています。国のワインやコーヒー文化も人気です。",
+        natureTitle: "自然と冒険",
+        natureText: "自然はキウイのライフスタイルに深く根付いています。山からビーチに至るまで、アウトドアアドベンチャーは文化的な規範です。"
+      },
+      de: {
+        title: "Neuseeland",
+        maoriCultureTitle: "Maori- und westliche Kultur",
+        maoriCultureText: "Neuseeland vereint sowohl Maori-Traditionen als auch westliche Lebensweisen. Der Maori Haka, Tätowierungen und Legenden spielen eine wichtige kulturelle Rolle.",
+        festivalsTitle: "Festivals",
+        festivalsText: "Veranstaltungen wie der Waitangi Day und Matariki (Maori-Neujahr) feiern die nationale Identität. Kulturelle Festivals und Rugby-Matches sind bedeutende Versammlungen.",
+        cuisineTitle: "Küche",
+        cuisineText: "Neuseeland ist bekannt für Lamm, Meeresfrüchte und das traditionelle Maori Hangi. Die Wein- und Kaffeekultur des Landes ist ebenfalls beliebt.",
+        natureTitle: "Natur & Abenteuer",
+        natureText: "Die Natur ist tief in der Kiwi-Lebensweise verwurzelt. Von den Bergen bis zu den Stränden ist Outdoor-Abenteuer ein kulturelles Norm."
+      }
+    };
+
+    // Function to change content based on selected language
+    function changeLanguage(language) {
+      document.getElementById('title').textContent = translations[language].title;
+      document.getElementById('maori-culture-title').textContent = translations[language].maoriCultureTitle;
+      document.getElementById('maori-culture-text').textContent = translations[language].maoriCultureText;
+      document.getElementById('festivals-title').textContent = translations[language].festivalsTitle;
+      document.getElementById('festivals-text').textContent = translations[language].festivalsText;
+      document.getElementById('cuisine-title').textContent = translations[language].cuisineTitle;
+      document.getElementById('cuisine-text').textContent = translations[language].cuisineText;
+      document.getElementById('nature-title').textContent = translations[language].natureTitle;
+      document.getElementById('nature-text').textContent = translations[language].natureText;
+    }
+
+    // Call the function to change content based on the selected language
+    changeLanguage(lang);
+  </script>
+
+</body>
+</html>

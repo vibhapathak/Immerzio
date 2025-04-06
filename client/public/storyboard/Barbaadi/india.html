@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>India - Culture & Heritage</title>
+  <link href="https://fonts.cdnfonts.com/css/gidole" rel="stylesheet">
+
+  <style>
+    :root {
+      --dark-purple: #433878;
+      --purple: #7E60BF;
+      --lavender: #E4B1F0;
+      --light-pink: #FFE1FF;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Gidole', sans-serif;
+      background: white;
+      color: #333;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    .header {
+      background: rgba(255, 225, 255, 0.4);
+      padding: 30px;
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    h1 {
+      color: var(--purple);
+      font-size: 60px;
+      margin-bottom: 10px;
+    }
+
+    .flag {
+      width: 120px;
+      margin: 20px auto;
+      display: block;
+      border: 2px solid var(--purple);
+      border-radius: 10px;
+    }
+
+    .container {
+      padding: 30px;
+      line-height: 1.8;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section-title {
+      color: var(--dark-purple);
+      font-size: 32px;
+      margin: 30px 0 10px;
+    }
+
+    .image {
+      width: 100%;
+      max-width: 700px;
+      margin: 20px auto;
+      display: block;
+      border-radius: 10px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 12px 24px;
+      background-color: var(--purple);
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: var(--dark-purple);
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 38px; }
+      .section-title { font-size: 24px; }
+    }
+    .ar-container {
+      display: flex;
+      justify-content: center;  /* Horizontally center the image */
+      align-items: center;      /* Vertically center the image */
+      height: 100%;             /* Ensure the container has a height */
+      width: 100%;    
+      flex-direction: column;          /* Ensure the container takes up full width */
+    }
+    
+    .ar-image {
+  max-width: 20%;   /* Adjust the size of the image */
+  max-height: 20%;  /* Optional: You can set a max-height to control the height */
+  object-fit: contain; /* Ensure the image scales properly without distortion */
+  margin-left: auto;  /* Shifts the image to the right */
+  margin-right: 0;    /* Optional: Ensures no right margin */
+}
+
+
+.ar-label {
+  margin-top: 1px;  /* Adds some space between the image and the label */
+  font-size: 16px;   /* Adjust font size as needed */
+  color: #333;       /* Adjust color of the label */
+  margin-left: auto;  /* Shifts the label to the right */
+  margin-right: 110px;    /* Optional: Ensures no right margin */
+}
+
+    .ar-image:hover {
+      transform: scale(1.1);
+    }
+
+    .main-image{
+      margin-top: 5px;
+      height: 100px;
+    }
+    .ar-image:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="header-content">
+      <h1 id="title">India</h1>
+      <img class = "main-image"src="images/india-flag.png" alt="Japan Flag" class="flag" />
+      
+    </div>
+    <div class="ar-container" style="margin-top: 15px;">
+      <img class="ar-image" src="images/iemo.png" alt="Interactive Onigiri" onclick="window.open('https://mywebar.com/qr/671817')" />
+      <span class="ar-label" id="top-ar-label">AR/VR</span>
+    </div>
+
+  </div>
+  <div class="container">
+    <h2 class="section-title" id="cultural-diversity-title">Cultural Diversity</h2>
+    <p id="cultural-diversity-text">
+      India is a land of vibrant traditions, colorful festivals, and diverse cultures. From the majestic Himalayas in the north to the serene backwaters of Kerala in the south, every region in India boasts its unique identity. 
+      The country is home to multiple religions, over 22 official languages, and hundreds of dialects. Indian culture is deeply rooted in family values, hospitality, spirituality, and community living.
+    </p>
+
+    <img class="image" src="images/ganga-aarti.jpeg" alt="Ganga Aarti in Varanasi" />
+
+    <h2 class="section-title" id="festivals-title">Festivals & Traditions</h2>
+    <p id="festivals-text">
+      Festivals like Diwali, Holi, Eid, Christmas, and Navratri are celebrated with grandeur and enthusiasm across the country. These festivals reflect the multicultural ethos of India and are often marked by elaborate rituals, music, dance, and feasting.
+    </p>
+
+    <img class="image" src="images/holi.jpg" alt="Holi Festival" />
+
+    <h2 class="section-title" id="cuisine-title">Indian Cuisine</h2>
+    <p id="cuisine-text">
+      Indian cuisine is known for its rich flavors, spices, and regional diversity. North India is famous for dishes like Butter Chicken and Paneer Tikka, while South India offers dosas, idlis, and sambar. Street food, from chaats in Delhi to vada pav in Mumbai, is a must-try for visitors.
+    </p>
+
+    <img class="image" src="images/indian-food.jpg" alt="Indian Food" />
+
+    <h2 class="section-title" id="art-title">Art, Music & Dance</h2>
+    <p id="art-text">
+      India has a rich tradition of classical music and dance forms like Bharatanatyam, Kathak, and Odissi. Folk dances and music also play a major role in local festivities. Art forms such as Madhubani painting, Tanjore painting, and rangoli reflect India’s aesthetic diversity.
+    </p>
+
+    <img class="image" src="images/bharatanatyam.jpg" alt="Bharatanatyam Dance" />
+
+    <a class="back-button" href="index.html">← Back to Home</a>
+  </div>
+
+  <script>
+    // Get selected language from query parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const lang = urlParams.get('lang') || 'en'; // fallback to English
+
+    // Translations for the content
+    const translations = {
+      en: {
+        title: "India",
+        culturalDiversityTitle: "Cultural Diversity",
+        culturalDiversityText: "India is a land of vibrant traditions, colorful festivals, and diverse cultures. From the majestic Himalayas in the north to the serene backwaters of Kerala in the south, every region in India boasts its unique identity. The country is home to multiple religions, over 22 official languages, and hundreds of dialects. Indian culture is deeply rooted in family values, hospitality, spirituality, and community living.",
+        festivalsTitle: "Festivals & Traditions",
+        festivalsText: "Festivals like Diwali, Holi, Eid, Christmas, and Navratri are celebrated with grandeur and enthusiasm across the country. These festivals reflect the multicultural ethos of India and are often marked by elaborate rituals, music, dance, and feasting.",
+        cuisineTitle: "Indian Cuisine",
+        cuisineText: "Indian cuisine is known for its rich flavors, spices, and regional diversity. North India is famous for dishes like Butter Chicken and Paneer Tikka, while South India offers dosas, idlis, and sambar. Street food, from chaats in Delhi to vada pav in Mumbai, is a must-try for visitors.",
+        artTitle: "Art, Music & Dance",
+        artText: "India has a rich tradition of classical music and dance forms like Bharatanatyam, Kathak, and Odissi. Folk dances and music also play a major role in local festivities. Art forms such as Madhubani painting, Tanjore painting, and rangoli reflect India’s aesthetic diversity."
+      },
+      hi: {
+        title: "भारत",
+        culturalDiversityTitle: "संस्कृतिक विविधता",
+        culturalDiversityText: "भारत जीवंत परंपराओं, रंगीन त्योहारों और विविध संस्कृतियों की भूमि है। उत्तर में हिमालय से लेकर दक्षिण में केरल के शांत जलमार्गों तक, भारत के हर क्षेत्र की अपनी विशेष पहचान है। इस देश में कई धर्मों, 22 से अधिक आधिकारिक भाषाओं और सैकड़ों बोलियों का घर है। भारतीय संस्कृति परिवार के मूल्यों, मेहमाननवाजी, आध्यात्मिकता और सामूहिक जीवन में गहरी निहित है।",
+        festivalsTitle: "त्योहार और परंपराएँ",
+        festivalsText: "दीवाली, होली, ईद, क्रिसमस और नवरात्रि जैसे त्योहार पूरे देश में भव्यता और उत्साह के साथ मनाए जाते हैं। ये त्योहार भारत की बहुसांस्कृतिक भावना को दर्शाते हैं और अक्सर विस्तृत अनुष्ठान, संगीत, नृत्य और भोजन से चिह्नित होते हैं।",
+        cuisineTitle: "भारतीय व्यंजन",
+        cuisineText: "भारतीय व्यंजन अपने समृद्ध स्वाद, मसालों और क्षेत्रीय विविधता के लिए प्रसिद्ध हैं। उत्तर भारत बटर चिकन और पनीर टिक्का जैसे व्यंजनों के लिए प्रसिद्ध है, जबकि दक्षिण भारत डोसा, इडली और सांबर प्रदान करता है। दिल्ली में चाट से लेकर मुंबई में वड़ा पाव तक स्ट्रीट फूड को ट्राय करना आवश्यक है।",
+        artTitle: "कला, संगीत और नृत्य",
+        artText: "भारत में भरतनाट्यम, कथक और ओडिशी जैसे शास्त्रीय संगीत और नृत्य रूपों की समृद्ध परंपरा है। लोक नृत्य और संगीत स्थानीय त्योहारों में भी प्रमुख भूमिका निभाते हैं। मधुबनी चित्रकला, तंजोर चित्रकला और रंगोली जैसे कला रूप भारत की सौंदर्य विविधता को दर्शाते हैं।"
+      },
+      ja: {
+        title: "インド",
+        culturalDiversityTitle: "文化的多様性",
+        culturalDiversityText: "インドは活気に満ちた伝統、色とりどりの祭り、多様な文化が融合した土地です。北の雄大なヒマラヤから南のケララの静かなバックウォーターまで、インドの各地域には独自のアイデンティティがあります。インドには多くの宗教、22の公式言語、数百の方言があります。インドの文化は、家族の価値観、ホスピタリティ、精神性、そして共同生活に深く根ざしています。",
+        festivalsTitle: "祭りと伝統",
+        festivalsText: "ディワリ、ホーリー、イード、クリスマス、ナヴラトリなどの祭りは、インド全土で盛大に祝われ、国の多文化的精神を反映しています。これらの祭りは、広範な儀式、音楽、ダンス、そして食事を伴って祝われます。",
+        cuisineTitle: "インディアンキュイジーヌ",
+        cuisineText: "インディアンキュイジーヌは、その豊かな風味、スパイス、地域ごとの多様性で知られています。北インディアはバターチキンやパニールティッカなどの料理で有名で、南インディアはドーサ、イドリ、サンバールを提供しています。デリーのチャートからムンバイのヴァダパヴまで、ストリートフードは訪問者にとって必食の料理です。",
+        artTitle: "アート、音楽、ダンス",
+        artText: "インドには、バラタナティアム、カタック、オディッシーなどの古典音楽やダンスの伝統があります。民間のダンスや音楽も地域の祭りで重要な役割を果たしています。マドゥバニ絵画、タージョール絵画、ランゴリなどのアート形式は、インドの美的多様性を反映しています。"
+      },
+      de: {
+        title: "Indien",
+        culturalDiversityTitle: "Kulturelle Vielfalt",
+        culturalDiversityText: "Indien ist ein Land voller lebendiger Traditionen, bunter Festivals und vielfältiger Kulturen. Vom majestätischen Himalaya im Norden bis zu den ruhigen Backwaters von Kerala im Süden hat jede Region Indiens ihre eigene Identität. Das Land beherbergt mehrere Religionen, über 22 Amtssprachen und Hunderte von Dialekten. Die indische Kultur ist tief in Familienwerten, Gastfreundschaft, Spiritualität und Gemeinschaftsleben verwurzelt.",
+        festivalsTitle: "Festivals & Traditionen",
+        festivalsText: "Festivals wie Diwali, Holi, Eid, Weihnachten und Navratri werden im ganzen Land mit Pracht und Begeisterung gefeiert. Diese Festivals spiegeln die multikulturelle Ethik Indiens wider und sind oft mit aufwändigen Ritualen, Musik, Tanz und Festessen verbunden.",
+        cuisineTitle: "Indische Küche",
+        cuisineText: "Die indische Küche ist bekannt für ihre reichen Aromen, Gewürze und regionale Vielfalt. Nordindien ist berühmt für Gerichte wie Butter Chicken und Paneer Tikka, während Südindien Dosas, Idlis und Sambar bietet. Street Food, von Chaats in Delhi bis Vada Pav in Mumbai, ist ein Muss für Besucher.",
+        artTitle: "Kunst, Musik & Tanz",
+        artText: "Indien hat eine reiche Tradition klassischer Musik- und Tanzformen wie Bharatanatyam, Kathak und Odissi. Volkstänze und Musik spielen ebenfalls eine wichtige Rolle bei lokalen Festlichkeiten. Kunstformen wie Madhubani-Malerei, Tanjore-Malerei und Rangoli spiegeln die ästhetische Vielfalt Indiens wider."
+      }
+  };
+
+  // Function to change content based on selected language
+  function changeLanguage(language) {
+    document.getElementById('title').textContent = translations[language].title;
+    document.getElementById('cultural-diversity-title').textContent = translations[language].culturalDiversityTitle;
+    document.getElementById('cultural-diversity-text').textContent = translations[language].culturalDiversityText;
+    document.getElementById('festivals-title').textContent = translations[language].festivalsTitle;
+    document.getElementById('festivals-text').textContent = translations[language].festivalsText;
+    document.getElementById('cuisine-title').textContent = translations[language].cuisineTitle;
+    document.getElementById('cuisine-text').textContent = translations[language].cuisineText;
+    document.getElementById('art-title').textContent = translations[language].artTitle;
+    document.getElementById('art-text').textContent = translations[language].artText;
+  }
+
+  // Call the function to change content based on the selected language
+  changeLanguage(lang);
+</script>
+
+</body>
+</html>
