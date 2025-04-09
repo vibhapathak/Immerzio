@@ -10,7 +10,7 @@ import commentRoutes from "./routes/commentRoutes.js";
 import setupSocket from "./socket.js";
 import messageRoutes from "./routes/MessagesRoutes.js";
 import multer from "multer";
-import path from "path";
+import path from "path";  // Use this import only
 import { fileURLToPath } from "url";
 
 dotenv.config();
@@ -51,13 +51,9 @@ app.use("/api/comment", commentRoutes);
 app.use(express.static(path.join(__dirname, "client", "dist")));
 
 // Catch-all route for React (SPA)
-const path = require('path');
-app.use(express.static(path.join(__dirname, '..', 'client', 'dist')));
-
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'client', 'dist', 'index.html'));
+  res.sendFile(path.join(__dirname, 'client', 'dist', 'index.html'));  // Removed the unnecessary parent folder '..'
 });
-
 
 // Start server and connect DB
 const server = app.listen(port, () => {
