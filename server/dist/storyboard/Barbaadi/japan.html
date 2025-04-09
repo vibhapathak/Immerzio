@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Japan - Culture & Heritage</title>
+  <link href="https://fonts.cdnfonts.com/css/gidole" rel="stylesheet">
+
+  <style>
+    :root {
+      --dark-purple: #433878;
+      --purple: #7E60BF;
+      --lavender: #E4B1F0;
+      --light-pink: #FFE1FF;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Gidole', sans-serif;
+      background: white;
+      color: #333;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    .header {
+      background: rgba(255, 225, 255, 0.4);
+      padding: 30px;
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    .header-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-left: 50px; /* Added margin to move content to the right */
+    }
+
+    h1 {
+      color: var(--purple);
+      font-size: 60px;
+      margin: 0 0 15px 0;
+    }
+
+    .flag {
+      width: 120px;
+      border: 2px solid var(--purple);
+      border-radius: 10px;
+    }
+
+    .container {
+      padding: 30px;
+      line-height: 1.8;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section-title {
+      color: var(--dark-purple);
+      font-size: 32px;
+      margin: 30px 0 10px;
+    }
+
+    .image {
+      width: 100%;
+      max-width: 700px;
+      margin: 20px auto;
+      display: block;
+      border-radius: 10px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    }
+    
+    /* Style for the clickable onigiri image */
+    .ar-image {
+      width: 200px;
+      display: block;
+      margin: 40px auto;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    
+    .ar-image:hover {
+      transform: scale(1.1);
+    }
+    
+    .ar-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    
+    .ar-label {
+      display: block;
+      color: var(--purple);
+      font-weight: bold;
+      margin-top: 10px;
+      font-size: 16px;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 12px 24px;
+      background-color: var(--purple);
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: var(--dark-purple);
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 38px; }
+      .section-title { font-size: 24px; }
+      .header-content { margin-left: 20px; } /* Adjusted for mobile */
+      .ar-image { width: 150px; }
+    }
+    .ar-container {
+      display: flex;
+      justify-content: center;  /* Horizontally center the image */
+      align-items: center;      /* Vertically center the image */
+      height: 100%;             /* Ensure the container has a height */
+      width: 100%;    
+      flex-direction: column;          /* Ensure the container takes up full width */
+    }
+    
+    .ar-image {
+  max-width: 20%;   /* Adjust the size of the image */
+  max-height: 20%;  /* Optional: You can set a max-height to control the height */
+  object-fit: contain; /* Ensure the image scales properly without distortion */
+  margin-left: auto ;  /* Shifts the image to the right */
+  margin-right: 50px;    /* Optional: Ensures no right margin */
+  height: 200px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+
+.ar-label {
+  margin-top: 0px;  /* Adds some space between the image and the label */
+  font-size: 16px;   /* Adjust font size as needed */
+  color: #333;       /* Adjust color of the label */
+  margin-left: auto;  /* Shifts the label to the right */
+  margin-right: 120px;    /* Optional: Ensures no right margin */
+  
+}
+
+    .ar-image:hover {
+      transform: scale(1.1);
+    }
+
+    .main-image{
+      margin-top: 5px;
+      height: 100px;
+    }
+    .ar-image:hover {
+      transform: scale(1.1);
+    }
+    
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="header-content">
+      <h1 id="title">Japan</h1>
+      <img class= "main-image" src="images/japan.png" alt="Japan Flag" class="flag" />
+      
+    </div>
+    <div class="ar-container" style="margin-top: 15px;">
+      <img class="ar-image" src="images/jemo1.png" alt="Interactive Onigiri" onclick="window.open('https://mywebar.com/qr/671818', '_blank')" />
+      <span class="ar-label" id="top-ar-label">AR/VR</span>
+    </div>
+    
+
+  </div>
+
+  <div class="container">
+    <h2 class="section-title" id="cultural-diversity-title">Cultural Diversity</h2>
+    <p id="cultural-diversity-text">
+      Japan is a country that beautifully blends modernity with tradition. From the bustling streets of Tokyo to the serene temples of Kyoto, Japan is a land of contrasts. It is home to a rich culture influenced by Buddhism, Shintoism, and a long history of art, music, and craftsmanship.
+    </p>
+
+    <img class="image" src="images/j1.jpg" alt="Japanese Temple" />
+    
+    <!-- Onigiri AR Image in the middle of the page -->
+  
+    <h2 class="section-title" id="festivals-title">Festivals & Traditions</h2>
+    <p id="festivals-text">
+      Festivals like Sakura (Cherry Blossom Festival), Tanabata, and the Gion Matsuri are celebrated with great enthusiasm. These festivals reflect Japan's deep-rooted traditions and the appreciation of nature, history, and community.
+    </p>
+
+    <img class="image" src="images/j2.jpg" alt="Sakura Festival" />
+
+    <h2 class="section-title" id="cuisine-title">Japanese Cuisine</h2>
+    <p id="cuisine-text">
+      Japanese cuisine is famous for its freshness and balance of flavors. Sushi, sashimi, tempura, and ramen are some of the most popular dishes. Traditional meals often include rice, soup, and a variety of side dishes like pickles and vegetables.
+    </p>
+
+    <img class="image" src="images/j3.jpg" alt="Japanese Cuisine" />
+
+    <h2 class="section-title" id="art-title">Art, Music & Dance</h2>
+    <p id="art-text">
+      Japanese art includes traditional forms such as Ikebana (flower arranging), Origami (paper folding), and Calligraphy (Shodo). Traditional music includes instruments like the shamisen and koto, while Noh and Kabuki are iconic traditional dance and theatre performances.
+    </p>
+
+    <img class="image" src="images/j4.jpg" alt="Shamisen Instrument" />
+
+    <a class="back-button" href="index.html">← Back to Home</a>
+  </div>
+
+  <script>
+    // Get selected language from query parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const lang = urlParams.get('lang') || 'en'; // fallback to English
+
+    // Translations for the content
+    const translations = {
+      en: {
+        title: "Japan",
+        culturalDiversityTitle: "Cultural Diversity",
+        culturalDiversityText: "Japan is a country that beautifully blends modernity with tradition. From the bustling streets of Tokyo to the serene temples of Kyoto, Japan is a land of contrasts. It is home to a rich culture influenced by Buddhism, Shintoism, and a long history of art, music, and craftsmanship.",
+        festivalsTitle: "Festivals & Traditions",
+        festivalsText: "Festivals like Sakura (Cherry Blossom Festival), Tanabata, and the Gion Matsuri are celebrated with great enthusiasm. These festivals reflect Japan's deep-rooted traditions and the appreciation of nature, history, and community.",
+        cuisineTitle: "Japanese Cuisine",
+        cuisineText: "Japanese cuisine is famous for its freshness and balance of flavors. Sushi, sashimi, tempura, and ramen are some of the most popular dishes. Traditional meals often include rice, soup, and a variety of side dishes like pickles and vegetables.",
+        artTitle: "Art, Music & Dance",
+        artText: "Japanese art includes traditional forms such as Ikebana (flower arranging), Origami (paper folding), and Calligraphy (Shodo). Traditional music includes instruments like the shamisen and koto, while Noh and Kabuki are iconic traditional dance and theatre performances.",
+        arLabel: "Click the onigiri for an AR experience!"
+      },
+      hi: {
+        title: "जापान",
+        culturalDiversityTitle: "संस्कृतिक विविधता",
+        culturalDiversityText: "जापान एक ऐसा देश है जो आधुनिकता और परंपरा का सुंदर मिश्रण है। टोक्यो की हलचल से लेकर क्योटो के शांत मंदिरों तक, जापान एक विपरीतताओं की भूमि है। यह बौद्ध धर्म, शिंतोवाद और कला, संगीत और शिल्पकला के लंबे इतिहास से प्रभावित एक समृद्ध संस्कृति का घर है।",
+        festivalsTitle: "त्योहार और परंपराएँ",
+        festivalsText: "साकुरा (चेरी ब्लॉसम फेस्टिवल), तनाबाता, और गियोन मात्सुरी जैसे त्योहारों को बड़े उत्साह से मनाया जाता है। ये त्योहार जापान की गहरी जड़ें हुई परंपराओं और प्रकृति, इतिहास और समुदाय के प्रति प्रशंसा को दर्शाते हैं।",
+        cuisineTitle: "जापानी व्यंजन",
+        cuisineText: "जापानी व्यंजन अपनी ताजगी और स्वादों के संतुलन के लिए प्रसिद्ध हैं। सुशी, सशिमी, टेम्पुरा, और रामेन कुछ लोकप्रिय व्यंजन हैं। पारंपरिक भोजन में अक्सर चावल, सूप और अचार और सब्ज़ियों जैसे विभिन्न साइड डिश शामिल होते हैं।",
+        artTitle: "कला, संगीत और नृत्य",
+        artText: "जापानी कला में पारंपरिक रूपों जैसे इकेबाना (फूलों की सजावट), ओरिगामी (कागज मोड़ना), और शोडो (कैलीग्राफी) शामिल हैं। पारंपरिक संगीत में शमिसेन और कोतो जैसे वाद्ययंत्र शामिल हैं, जबकि नो और काबुकी पारंपरिक नृत्य और रंगमंच प्रदर्शन हैं।",
+        arLabel: "AR अनुभव के लिए ओनिगिरी पर क्लिक करें!"
+      },
+      ja: {
+        title: "日本",
+        culturalDiversityTitle: "文化的多様性",
+        culturalDiversityText: "日本は現代性と伝統が美しく融合した国です。東京の賑やかな通りから京都の静かな寺院まで、日本は対照的な土地です。仏教、神道、そして長い歴史を持つ芸術、音楽、工芸が影響を与えた豊かな文化の家です。",
+        festivalsTitle: "祭りと伝統",
+        festivalsText: "さくら（桜祭り）、七夕、そして祇園祭などの祭りは盛大に祝われます。これらの祭りは、日本の深い伝統と自然、歴史、コミュニティへの感謝を反映しています。",
+        cuisineTitle: "日本料理",
+        cuisineText: "日本料理は新鮮さと風味のバランスで知られています。寿司、刺身、天ぷら、ラーメンは最も人気のある料理です。伝統的な食事には、ご飯、スープ、漬物や野菜などのさまざまな副菜が含まれています。",
+        artTitle: "芸術、音楽、ダンス",
+        artText: "日本の芸術には、花道（生け花）、折り紙（紙を折る）、書道（書道）のような伝統的な形式があります。伝統音楽には、三味線や琴のような楽器が含まれており、能や歌舞伎は伝統的な舞踊や劇のパフォーマンスです。",
+        arLabel: "ARエクスペリエンスにはおにぎりをクリックしてください！"
+      }
+    };
+
+    // Function to change content based on selected language
+    function changeLanguage(language) {
+      document.getElementById('title').textContent = translations[language].title;
+      document.getElementById('cultural-diversity-title').textContent = translations[language].culturalDiversityTitle;
+      document.getElementById('cultural-diversity-text').textContent = translations[language].culturalDiversityText;
+      document.getElementById('festivals-title').textContent = translations[language].festivalsTitle;
+      document.getElementById('festivals-text').textContent = translations[language].festivalsText;
+      document.getElementById('cuisine-title').textContent = translations[language].cuisineTitle;
+      document.getElementById('cuisine-text').textContent = translations[language].cuisineText;
+      document.getElementById('art-title').textContent = translations[language].artTitle;
+      document.getElementById('art-text').textContent = translations[language].artText;
+      document.getElementById('ar-label').textContent = translations[language].arLabel;
+    }
+
+    // Call the function to change content based on the selected language
+    changeLanguage(lang);
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>United States of America - Culture & Heritage</title>
+  <link href="https://fonts.cdnfonts.com/css/gidole" rel="stylesheet">
+  <style>
+    :root {
+      --dark-purple: #433878;
+      --purple: #7E60BF;
+      --lavender: #E4B1F0;
+      --light-pink: #FFE1FF;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Gidole', sans-serif;
+      background: white;
+      color: #333;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    .header {
+      background: rgba(255, 225, 255, 0.4);
+      padding: 30px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center; /* Align items vertically */
+    }
+
+    h1 {
+      color: var(--purple);
+      font-size: 60px;
+      margin-right: 20px; /* Space between title and flag */
+    }
+
+    .flag {
+      width: 120px;
+      display: block;
+      border: 2px solid var(--purple);
+      border-radius: 10px;
+    }
+
+    .container {
+      padding: 30px;
+      line-height: 1.8;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section-title {
+      color: var(--dark-purple);
+      font-size: 32px;
+      margin: 30px 0 10px;
+    }
+
+    .image {
+      width: 100%;
+      max-width: 700px;
+      margin: 20px auto;
+      display: block;
+      border-radius: 10px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 12px 24px;
+      background-color: var(--purple);
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: var(--dark-purple);
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 38px; }
+      .section-title { font-size: 24px; }
+    }
+
+    .ar-container {
+      display: flex;
+      justify-content: center;  
+      align-items: center;      
+      height: 100%;             
+      width: 100%;    
+      flex-direction: column; 
+    }
+    
+    .ar-image {
+  max-width: 20%;   /* Adjust the size of the image */
+  max-height: 20%;  /* Optional: You can set a max-height to control the height */
+  object-fit: contain; /* Ensure the image scales properly without distortion */
+  margin-left: auto ;  /* Shifts the image to the right */
+  margin-right: 50px;    /* Optional: Ensures no right margin */
+  height: 200px;
+}
+
+
+.ar-label {
+  margin-top: 10px;  /* Adds some space between the image and the label */
+  font-size: 16px;   /* Adjust font size as needed */
+  color: #333;       /* Adjust color of the label */
+  margin-left: auto;  /* Shifts the label to the right */
+  margin-right: 110px;    /* Optional: Ensures no right margin */
+  
+}
+
+    .ar-image:hover {
+      transform: scale(1.1);
+    }
+
+    .main-image{
+      margin-top: 5px;
+      height: 100px;
+    }
+    .ar-image:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <h1 id="title">United States of America</h1>
+      <img class = " main-image"src="images/us.png" alt="United States of America Flag" class="flag" />
+      
+    </div>
+    <div class="ar-container" style="margin-top: 15px;">
+      <img class="ar-image" src="images/usemo.png" alt="Interactive Onigiri" onclick="window.open('https://mywebar.com/qr/671818', '_blank')" />
+      <span class="ar-label" id="top-ar-label">AR/VR</span>
+    </div>
+  </div>
+  <div class="container">
+    <h2 class="section-title" id="melting-pot-title">Cultural Melting Pot</h2>
+    <p id="melting-pot-text">The USA is known for its cultural diversity, influenced by waves of immigration over centuries. It's a hub of innovation, entertainment, and individual freedom.</p>
+    <img class="image" src="images/us1.jpg" alt="Cultural Melting Pot Image" />
+
+    <h2 class="section-title" id="festivals-title">Festivals & Traditions</h2>
+    <p id="festivals-text">Major celebrations include Thanksgiving, Independence Day, and Halloween. These events are marked with parades, fireworks, and family gatherings.</p>
+    <img class="image" src="images/us2.jpg" alt="Festivals & Traditions Image" />
+
+    <h2 class="section-title" id="cuisine-title">Cuisine</h2>
+    <p id="cuisine-text">American cuisine includes burgers, hot dogs, barbecue, and diverse dishes from different ethnic backgrounds. Each state has its own specialties.</p>
+    <img class="image" src="images/us3.jpeg" alt="Cuisine Image" />
+
+    <h2 class="section-title" id="entertainment-title">Media & Entertainment</h2>
+    <p id="entertainment-text">Hollywood is the heart of the global entertainment industry, while American music genres like jazz, rock, and hip-hop have shaped global culture.</p>
+    <img class="image" src="images/us4.jpg" alt="Media & Entertainment Image" />
+
+    <a class="back-button" href="index.html">← Back to Home</a>
+  </div>
+
+  <script>
+    // Get selected language from query parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const lang = urlParams.get('lang') || 'en'; // fallback to English
+
+    // Translations for the content
+    const translations = {
+      en: {
+        title: "United States of America",
+        meltingPotTitle: "Cultural Melting Pot",
+        meltingPotText: "The USA is known for its cultural diversity, influenced by waves of immigration over centuries. It's a hub of innovation, entertainment, and individual freedom.",
+        festivalsTitle: "Festivals & Traditions",
+        festivalsText: "Major celebrations include Thanksgiving, Independence Day, and Halloween. These events are marked with parades, fireworks, and family gatherings.",
+        cuisineTitle: "Cuisine",
+        cuisineText: "American cuisine includes burgers, hot dogs, barbecue, and diverse dishes from different ethnic backgrounds. Each state has its own specialties.",
+        entertainmentTitle: "Media & Entertainment",
+        entertainmentText: "Hollywood is the heart of the global entertainment industry, while American music genres like jazz, rock, and hip-hop have shaped global culture."
+      },
+      hi: {
+        title: "संयुक्त राज्य अमेरिका",
+        meltingPotTitle: "संस्कृतिक मेल्टिंग पॉट",
+        meltingPotText: "संयुक्त राज्य अमेरिका अपनी सांस्कृतिक विविधता के लिए जाना जाता है, जो सदियों से आव्रजन की लहरों से प्रभावित है। यह नवाचार, मनोरंजन और व्यक्तिगत स्वतंत्रता का केंद्र है।",
+        festivalsTitle: "त्योहार और परंपराएँ",
+        festivalsText: "प्रमुख उत्सवों में धन्यवाद, स्वतंत्रता दिवस, और हैलोवीन शामिल हैं। इन आयोजनों में परेड, आतिशबाजी और पारिवारिक मिलन समारोह होते हैं।",
+        cuisineTitle: "व्यंजन",
+        cuisineText: "अमेरिकी व्यंजन में बर्गर, हॉट डॉग, बारबेक्यू और विभिन्न जातीय पृष्ठभूमियों से आने वाले व्यंजन शामिल हैं। प्रत्येक राज्य के पास अपनी विशेषताएँ होती हैं।",
+        entertainmentTitle: "मीडिया और मनोरंजन",
+        entertainmentText: "हॉलीवुड वैश्विक मनोरंजन उद्योग का केंद्र है, जबकि अमेरिकी संगीत शैलियाँ जैसे जैज़, रॉक, और हिप-हॉप ने वैश्विक संस्कृति को आकार दिया है।"
+      },
+      ja: {
+        title: "アメリカ合衆国",
+        meltingPotTitle: "文化的なメルティングポット",
+        meltingPotText: "アメリカは、何世代にもわたる移民の波によって影響を受けた文化的多様性で知られています。それは革新、エンターテイメント、そして個人の自由の中心地です。",
+        festivalsTitle: "祭りと伝統",
+        festivalsText: "主な祝祭には感謝祭、独立記念日、ハロウィンがあります。これらのイベントはパレード、花火、家族の集まりで祝われます。",
+        cuisineTitle: "料理",
+        cuisineText: "アメリカの料理には、ハンバーガー、ホットドッグ、バーベキュー、そしてさまざまな民族的背景からの料理が含まれています。各州にはそれぞれの特産品があります。",
+        entertainmentTitle: "メディアとエンターテイメント",
+        entertainmentText: "ハリウッドは世界のエンターテイメント業界の中心地であり、アメリカの音楽ジャンルであるジャズ、ロック、ヒップホップは世界の文化を形作りました。"
+      },
+      de: {
+        title: "Vereinigte Staaten von Amerika",
+        meltingPotTitle: "Kultureller Schmelztiegel",
+        meltingPotText: "Die USA sind bekannt für ihre kulturelle Vielfalt, die durch Wellen von Einwanderung über Jahrhunderte hinweg beeinflusst wurde. Es ist ein Zentrum für Innovation, Unterhaltung und individuelle Freiheit.",
+        festivalsTitle: "Festivals & Traditionen",
+        festivalsText: "Wichtige Feierlichkeiten sind Erntedankfest, Unabhängigkeitstag und Halloween. Diese Veranstaltungen werden mit Paraden, Feuerwerken und Familientreffen gefeiert.",
+        cuisineTitle: "Küche",
+        cuisineText: "Die amerikanische Küche umfasst Burger, Hot Dogs, Barbecue und vielfältige Gerichte aus verschiedenen ethnischen Hintergründen. Jeder Bundesstaat hat seine eigenen Spezialitäten.",
+        entertainmentTitle: "Medien & Unterhaltung",
+        entertainmentText: "Hollywood ist das Herz der globalen Unterhaltungsindustrie, während amerikanische Musikgenres wie Jazz, Rock und Hip-Hop die Weltkultur geprägt haben."
+      }
+    };
+
+    // Function to change content based on selected language
+    function changeLanguage(language) {
+      document.getElementById('title').textContent = translations[language].title;
+      document.getElementById('melting-pot-title').textContent = translations[language].meltingPotTitle;
+      document.getElementById('melting-pot-text').textContent = translations[language].meltingPotText;
+      document.getElementById('festivals-title').textContent = translations[language].festivalsTitle;
+      document.getElementById('festivals-text').textContent = translations[language].festivalsText;
+      document.getElementById('cuisine-title').textContent = translations[language].cuisineTitle;
+      document.getElementById('cuisine-text').textContent = translations[language].cuisineText;
+      document.getElementById('entertainment-title').textContent = translations[language].entertainmentTitle;
+      document.getElementById('entertainment-text').textContent = translations[language].entertainmentText;
+    }
+
+    // Call the function to change content based on the selected language
+    changeLanguage(lang);
+  </script>
+</body>
+</html>
